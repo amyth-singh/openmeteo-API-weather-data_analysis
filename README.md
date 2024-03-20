@@ -17,6 +17,7 @@ Containing the schema definition for database tables, this YAML script is utilis
 Final processed data in CSV
 
 # Important
+### Libraries, Imports and Frameworks (main.py)
   ```
   import openmeteo_requests
   import requests_cache
@@ -28,3 +29,17 @@ Final processed data in CSV
   import mysql.connector
   from sqlalchemy import create_engine, MetaData, Table, Column, Integer, DateTime, Float, Date, TIMESTAMP
   ```
+## Extraction Range (main.py)
+set extraction start date ```"2021-03-19"```
+set extraction end date ```"2024-03-19"```
+  ```
+  def main():
+    original_df = fetch_data_api("https://archive-api.open-meteo.com/v1/archive", "2021-03-19", "2024-03-19", 52.52, 13.41)
+  ```
+## Visualise temprature change
+set path to final output.csv file
+  ```
+  plot_avg_temp_by_year("path_to_weather_data_output.csv")
+  ```
+
+  
