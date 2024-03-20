@@ -1,5 +1,8 @@
-# DataFlowChart
+# Data FlowChart
 ![Workflow](workflow.png)
+
+# Avg Temperature by Years (3)
+![Workflow](tempchange.png)
 
 ## main.py:
 This script serves as the core functionality for data retrieval, processing, and storage. It interfaces with the openmeteo API to fetch weather data, processes it to derive meaningful insights, and then facilitates the storage of processed data in both CSV and MySQL formats.
@@ -36,7 +39,7 @@ set extraction end date ```"2024-03-19"```
   def main():
     original_df = fetch_data_api("https://archive-api.open-meteo.com/v1/archive", "2021-03-19", "2024-03-19", 52.52, 13.41)
   ```
-## Visualise temprature change
+## Visualise temprature change (visualisation.py)
 set path to final output.csv file
   ```
   plot_avg_temp_by_year("path_to_weather_data_output.csv")
