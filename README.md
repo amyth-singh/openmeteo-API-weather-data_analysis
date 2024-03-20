@@ -1,7 +1,7 @@
 # Data FlowChart
 ![Workflow](workflow.png)
 
-# Avg Temperature by Years (3)
+# Avg Temperature Change by Years (3)
 ![Workflow](tempchange.png)
 
 ## main.py:
