@@ -1,0 +1,43 @@
+weather_data:
+  - name: id
+    type: Integer
+    attributes: AUTO_INCREMENT PRIMARY KEY
+    
+  - name: date
+    type: DateTime
+
+  - name: max_temp
+    type: FLOAT(7, 3)
+
+  - name: min_temp
+    type: FLOAT(7, 3)
+
+  - name: avg_temp
+    type: FLOAT(7, 3)
+
+  - name: year
+    type: DATE
+
+  - name: avg_temp_for_year
+    type: FLOAT(7, 3)
+
+  - name: f_max_temp
+    type: FLOAT(7, 3)
+
+  - name: f_min_temp
+    type: FLOAT(7, 3)
+
+  - name: f_avg_temp
+    type: FLOAT(7, 3)
+
+  - name: max_temp_change
+    type: FLOAT(7, 3)
+
+  - name: min_temp_change
+    type: FLOAT(7, 3)
+
+  - name: avg_temp_change
+    type: FLOAT(7, 3)
+
+  - name: csv_creation_time
+    type: TIMESTAMP
