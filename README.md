@@ -1,1 +1,1 @@
-![Image Name](path/to/your/workflow.png)
+![Workflow](workflow.png)
