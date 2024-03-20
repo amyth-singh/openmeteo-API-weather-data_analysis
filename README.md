@@ -15,3 +15,16 @@ Containing the schema definition for database tables, this YAML script is utilis
 
 ## weather_data_output.csv
 Final processed data in CSV
+
+# Important
+  ```
+  import openmeteo_requests
+  import requests_cache
+  import pandas as pd 
+  import matplotlib.pyplot as plt
+  from retry_requests import retry
+  from datetime import datetime
+  import yaml
+  import mysql.connector
+  from sqlalchemy import create_engine, MetaData, Table, Column, Integer, DateTime, Float, Date, TIMESTAMP
+  ```
