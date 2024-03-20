@@ -6,6 +6,7 @@
 ![Workflow](tempchange.png)
 
 ## main.py:
+#### script is idempotent (will output same results regardless of the no. of times it runs)
 This script serves as the core functionality for data retrieval, processing, and storage. It interfaces with the openmeteo API to fetch weather data, processes it to derive meaningful insights, and then facilitates the storage of processed data in both CSV and MySQL formats.
 
 ## visualisation.py:
