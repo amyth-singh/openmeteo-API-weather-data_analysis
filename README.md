@@ -41,7 +41,14 @@ set extraction end date ```"2024-03-19"```
   def main():
     original_df = fetch_data_api("https://archive-api.open-meteo.com/v1/archive", "2021-03-19", "2024-03-19", 52.52, 13.41)
   ```
-## Visualise temprature change (visualisation.py)
+## Longitude and Latitude - Location (main.py)
+set longitude ```52.52```
+set Latitude end date ```13.41```
+  ```
+  def main():
+    original_df = fetch_data_api("https://archive-api.open-meteo.com/v1/archive", "2021-03-19", "2024-03-19", 52.52, 13.41)
+  ```
+## Visualise temperature change (visualisation.py)
 set path to final output.csv file
   ```
   plot_avg_temp_by_year("path_to_weather_data_output.csv")
