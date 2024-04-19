@@ -39,8 +39,6 @@ def fetch_data_api(url, start_date, end_date, latitude, longitude):
     df = pd.DataFrame(data=data)
     return df
 
-###############################################################################
-
 def process_data(df):
     df['date'] = pd.to_datetime(df['date'])
     df['year'] = df['date'].dt.year
@@ -55,14 +53,10 @@ def process_data(df):
 
     return df
 
-#####################################################################
-
 def export_to_csv(df, file_name):
     df['csv_creation_time'] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     df.to_csv(file_name, index=False)
     print(f"Data exported to {file_name} successfully.")
-
-####################################################################
 
 def get_database_credentials():
     try:
@@ -117,15 +111,11 @@ def create_table():
                     conn.close()
                     print("MySQL connection is closed")
 
-##################################################################
-
 def load_df_to_mysql(processed_df, table_name, db_config):
     connection_string = f"mysql://{db_config['user']}:{db_config['password']}@{db_config['host']}:{db_config['port']}/{db_config['database']}"
     engine = create_engine(connection_string)
     processed_df.to_sql(name=table_name, con=engine, if_exists='replace', index=False)
     print(f"DataFrame successfully loaded into MySQL table '{table_name}'")
-
-###########################################################
 
 def main():
     original_df = fetch_data_api("https://archive-api.open-meteo.com/v1/archive", "2021-03-19", "2024-03-19", 52.52, 13.41)
@@ -138,5 +128,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
